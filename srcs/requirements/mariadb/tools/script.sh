@@ -9,6 +9,6 @@ mariadb -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('$DB_ROOT_PWD
 mariadb -u root -e "FLUSH PRIVILEGES;"
 mariadb -u root -p$DB_ROOT_PWD -e "GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PWD';"
 mariadb -u root -p$DB_ROOT_PWD -e "FLUSH PRIVILEGES;"
-service mariadb stop
+mariadb -u root -p$DB_ROOT_PWD -e "shutdown;"
 
-exec mysqld_safe
+mariadbd
