@@ -13,6 +13,4 @@ COPY tools/script.sh /
 
 RUN chmod 777 /script.sh
 
-#CMD ["bash", "script.sh"]
-
-#ENTRYPOINT ["mysqld_safe"]
+CMD ["bash", "script.sh"]
