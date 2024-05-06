@@ -6,12 +6,12 @@
 #    By: pbengoec <pbengoec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 13:10:17 by pbengoec          #+#    #+#              #
-#    Updated: 2024/05/06 15:13:34 by pbengoec         ###   ########.fr        #
+#    Updated: 2024/05/06 15:24:31 by pbengoec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Docker compose file
-DOC_FILE = /srcs/docker-compose.yml
+DOC_FILE = ./srcs/docker-compose.yml
 
 # Folder volumes
 FD_WORD = /home/pbengoec/data/wordpress
