@@ -6,7 +6,7 @@
 #    By: pbengoec <pbengoec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 13:10:17 by pbengoec          #+#    #+#              #
-#    Updated: 2024/05/06 15:24:31 by pbengoec         ###   ########.fr        #
+#    Updated: 2024/05/06 15:39:41 by pbengoec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,22 +26,26 @@ all: build run
 
 build: 
 	@echo "${G}Building docker-compose...${X}"
-	mkdir -p ${FD_WORD}
-	mkdir -p ${FD_MARIA}
-	@docker-compose ${DOC_FILE} build
+	@mkdir -p ${FD_WORD}
+	@mkdir -p ${FD_MARIA}
+	@docker-compose -f ${DOC_FILE} build
 	@echo "${G}Building completed${X}"
 
 run: 
-	@echo "${G}Starting docker-compose...${X}"
-	@docker-compose ${DOC_FILE} up -d
+	@echo "${G}Starting inception...${X}"
+	@docker-compose -f ${DOC_FILE} up -d
+	@echo "${G}Inception started${X}"
+
 
 stop:
-	@echo "${R}Starting docker-compose...${X}"
-	@docker-compose ${DOC_FILE} stop
+	@echo "${R}Stopping docker-compose...${X}"
+	@docker-compose -f ${DOC_FILE} stop
+	@echo "${R}Docker-compose stopped${X}"
 
 down:
-	@echo "${R}Starting docker-compose...${X}"
-	@docker-compose ${DOC_FILE} down -v
+	@echo "${R}Removing docker-compose...${X}"
+	@docker-compose -f ${DOC_FILE} down -v
+	@echo "${R}Docker-compose removed${X}"
 
 clean: stop down
 
