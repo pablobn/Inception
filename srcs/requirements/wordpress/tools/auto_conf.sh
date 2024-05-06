@@ -1,5 +1,4 @@
 #!/bin/bash
-sleep 10
 wp config set DB_NAME $DB_NAME --allow-root --path=/var/www/html/
 wp config set DB_USER $DB_USER --allow-root --path=/var/www/html/
 wp config set DB_PASSWORD $DB_PWD --allow-root --path=/var/www/html/
