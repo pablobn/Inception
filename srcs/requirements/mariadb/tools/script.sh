@@ -10,3 +10,5 @@ mariadb -u root -e "FLUSH PRIVILEGES;"
 mariadb -u root -p$DB_ROOT_PWD -e "GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PWD';"
 mariadb -u root -p$DB_ROOT_PWD -e "FLUSH PRIVILEGES;"
 service mariadb stop
+
+exec mysqld_safe
