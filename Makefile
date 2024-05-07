@@ -6,7 +6,7 @@
 #    By: pbengoec <pbengoec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 13:10:17 by pbengoec          #+#    #+#              #
-#    Updated: 2024/05/06 15:39:41 by pbengoec         ###   ########.fr        #
+#    Updated: 2024/05/06 19:00:31 by pbengoec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ stop:
 
 down:
 	@echo "${R}Removing docker-compose...${X}"
-	@docker-compose -f ${DOC_FILE} down -v
+	@docker-compose -f ${DOC_FILE} down
 	@echo "${R}Docker-compose removed${X}"
 
 clean: stop down
